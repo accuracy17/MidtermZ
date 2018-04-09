@@ -22,11 +22,10 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 
-		int [] num = new int[10];
+		int [] num = new int[1000000];
 		storeRandomNumbers(num);
 		ConnectDB connectDB = new ConnectDB();
 		//Selection Sort
-
 		Sort algo = new Sort();
 		algo.selectionSort(num);
 		long selectionSortExecutionTime = algo.executionTime;
@@ -36,27 +35,13 @@ public class Numbers {
 		printValue(numbers);
 		int n = num.length;
 		randomize (num, n);
-
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
-		connectDB.insertDataFromArrayToMySql(num,"insertion_sort","SortingNumbers");
-		List<String> inumbers = connectDB.readDataBase("insertion_sort", "SortingNumbers");
-		printValue(inumbers);
-		int in = num.length;
-		randomize(num,in);
 
 		//By following above, Continue for rest of the Sorting Algorithm....
 
-		algo.bubbleSort(num);
-		long bubbleSortExecutionTime = algo.executionTime;
-		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
-		connectDB.insertDataFromArrayToMySql(num,"bubble_sort","SortingNumbers");
-		List<String> bnumbers = connectDB.readDataBase("bubble_sort", "SortingNumbers");
-		printValue(bnumbers);
-		int bn = num.length;
-		randomize(num,bn);
 
 
 
@@ -67,7 +52,7 @@ public class Numbers {
 	public static void storeRandomNumbers(int [] num){
 		Random rand = new Random();
 		for(int i=0; i<num.length; i++){
-			num[i] = rand.nextInt(100);
+			num[i] = rand.nextInt(1000000);
 		}
 	}
 
