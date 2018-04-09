@@ -7,20 +7,22 @@ public interface Employee {
 	*/
 	//please read the following method and understand the business requirements of these following methods
 	//and then implement these in a concrete class.
-	
-	//employeeId() will return employee id.
-	public int employeeId();
-	
-	//employeeName() will return employee name
-	public String employeeName();
-	
-	//assignDepartment() will assign employee to departments
+
+    //assignDepartment assigns employee to departments
     public void assignDepartment();
-	
-	//calculate employee salary
-	public int calculateSalary();
-	
-	//employee benefit
-	public void benefitLayout();
+
+	// returns employee id.
+	public int employeeId();
+
+	//employeeName returns employee name
+	public String employeeName();
+
+
+
+	//calculates employee salary
+	public int calcSalary();
+
+	//benefits
+	public void benefits();
 
 }

@@ -5,65 +5,229 @@ A. programming language is a formal language that specifies a set of instruction
  various kinds of output.
 
 What jdk contains or composed of and define each components?
+JDK java development kit. components
+The runtime interpreter is the core runtime module for the Java system.
+Java compiler is javac tool located in /bin folder of the JDK installation directory. javac tool (accessed using javac command) reads class and interface definitions, written in the Java programming language, and compiles them into bytecode class files. It can also process annotations in Java source files and classes.
+Java Disassembler: The javap command is the disassembly tool of JDK that disassembles one or more class files.
+Java Header File Generator: Java Header File Generator (javah command-line tool) generates C header and source files that are needed to implement native methods.
+
+
 What is IDE?
+IDE  integraded develop environment *must have jdk to use java
+
 What are the IDEs available in the market to support java?
+IntelliJ
+Eclipse
+
 Explain the entire java life cycle.
+1.editor
+2. source code
+3. java compler
+4. byte codes
+5. jvm
+6. operating system
+
 what is class?
+Blueprint of an object
+
 What is object?
+an instance of a class
+
 What is the entry point of an application?
+Main method is the entry point of a Java application
+
 Why main is static?
+The main method must be declared public, static and void in Java otherwise, JVM will not able to run Java program. Keyword static allows main to be called without creating an object of the class in which the main method is defined.
+
 Which class is the superclass of all classes?
-What is difference between path and classpath variables?
+Object class is the super class for all java classes
+
+
 What is the difference between an Interface and Abstract class?
+Abstract class can have abstract and non-abstract methods. doesn't support multiple inheritance. can provide the implementation of interface. abstract keyword is used to declare abstract class.
+Interface can have only abstract methods. Since Java 8, it can have default and static methods also. Interface supports multiple inheritance. Interface has only static and final variables. can't provide the implementation of abstract class. interface keyword is used to declare interface.
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+No we cannot make make object from an Interface and Abstract class. But we can do that indirectly with the help of anonymous inner type.
+
 what is Access Specifier?
+It is a defining code element that can determine which elements of a program are allowed to access a specific variable or other piece of data.
+
 What is OOP ? Define each feature of java OOP.
+OOP offers several benefits to the program designer and the user.
+Inheritance, Polymorphism, Abstraction, Encapsulation
+advantages are:
+It is possible to have multiple objects to coexist without any interference.
+It is possible to map objects in the problem domain to those objects in the program.
+It is easy to partition the work in a project based on objects.
+The data-centered design approach enables us to capture more details of the model in an implementable form.
+Software complexity can be easily managed.
+
 What is Java Package and which package is imported by default?
+The default package is an unnamed package. The unnamed package contains java classes whose source files did not contain a package declaration. The purpose of default package is for convenience when developing small or temporary applications or when just beginning development.The compiled class files will be in the current working directory.
+
+
 What is API? Name list of API that you have used so far.
-Does java support multiple inheritance, explain why or why not?
+API (Application Programming Interface) is the set of classes included with the Java Development Environment. These classes are written using the Java language and run on the JVM. The Java API includes everything from collection classes to GUI classes
+
+
+
+Does java support multiple inheritance?
+No Java doesn’t allow multiple inheritance.
+
 What is method overloading and when it happens?
+Method overloading allows a class to have more than one method having the same name, if their argument lists are different. It is similar to constructor overloading in Java, that allows a class to have more than one constructor having different argument lists.
+
 Explain exceptions in java and how to handle it.
+In Java exception (or exceptional event) is a problem that arises during the execution of a program.  Java provides a powerful mechanism which allows you to handle the exceptional event where it occurred or in one of the higher methods in the call stack.
+
 What is static keyword in java? How it has been used in variables and methods ?
+In Java, static denotes class methods and class variables. These methods and variables can be retrieved without an instance present.
+The main method is static JVM can call it without creating any instance of a class which contains the main method.
+
 What is final and how it has been used variables and methods?
+Final is a keyword or reserved word in Java and can be applied to member variables, methods, class and local variables in Java.
+Final variables are often declared with static keyword in java and treated as constant.
+
 What is final, finally and finalize?
+ Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.
+Finally is used to place important code, it will be executed whether exception is handled or not.
+Finalize is used to perform clean up processing just before object is garbage collected.
+
 What is a constructor ?
-Can we have multiple constructors in a class?
-If we don't have a constructor declared, what is called during the object creation?
+A constructor is a special method of a class or structure in object-oriented programming that initializes an object of that type. A constructor is an instance method that usually has the same name as the class, and can be used to set the values of the members of an object, either to default or to user-defined values.
+
 What is "this" keyword in java ?
-What is "super" keyword in java? How many possible way can you use?
+Keyword THIS is a reference variable in Java that refers to the current object. ... It can be used to refer instance variable of current class. It can be used to invoke or initiate current class constructor. It can be passed as an argument in the method call.
+
+What is "super" keyword in java?
+The super keyword in java is a reference variable that is used to refer parent class objects.
+
 What is JVM stand for ?
+JVM stands for Java virtual machine
+
+
 Is JVM platform independent?
+NO
+
 What version of java are you using?
+1.8
+
 What is JAR stand for ?
-What is the difference between JDK and JVM?
-What is the difference between JVM and JRE?
+JAR stands for "Java ARchive"
+
+What is the difference between JDK and JVM? What is the difference between JVM and JRE?
+JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed.
+JRE is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM.
+JDK is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
+
+
 What is compile time and run time?
+Compile time is where your compiler transforms your source code to a machine understandable language. "Runtime" is when your code is executed
+
 What is heap?
+Heap is an area of memory used for dynamic memory allocationThis part of memory stores the actual object in memory. Those are referenced by the variables from the stack.
+
 How java manage it's memory?
+Java mange’s the memory through Garbage collection. Garbage collection free the memory by destroying some objects which don’t have references
+
+
+
 What is the difference between String, StringBuffer and StringBuilder?
+String is immutable ( once created can not be changed )object . The object created as a String is stored in the Constant String Pool.
+ StringBuffer is mutable means one can change the value of the object . The object created through StringBuffer is stored in the heap.
+StringBuilder is same as the StringBuffer , that is it stores the object in heap and it can also be modified . The main difference between the StringBuffer and StringBuilder is that StringBuilder is also not thread safe.
+
+
 What is Singleton class?
+A singleton is a class that allows only a single instance of itself to be created and gives access to that created instance. It contains static variables that can accommodate unique and private instances of itself.
+
+
 What is Serialization and Deserialization?
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory
+
 when to use transient variable in java?
+use the transient keyword to indicate to the Java virtual machine that the indicated variable is not part of the persistent state of the object.
+
+
 Difference between while and do..while loop?
+In a do-while loop, the body of loop occurs before the controlling condition, and the conditional statement is at the bottom of the loop.
+
 What is Enum?
+special data type that enables for a variable to be a set of predefined constants. The variable must be equal to one of the values that have been predefined for it.
+
 What is Iterator?
+In computer programming, an iterator is an object that enables a programmer to traverse a container, particularly lists.
+Various types of iterators are often provided via a container's interface.
+
 Which one will take more memory, an int or Integer?
+Integer takes more memory
+
 Why is String Immutable in Java?
+  In java, string objects are immutable. Immutable simply means unmodifiable or unchangeable. Once string object is created its data or state can't be changed but a new string object is created.
+
 What is constructor chaining in Java?
+Constructor chainingis the process of calling one constructor from anotherconstructor with respect to current object
+
+
 The difference between Serial and Parallel Garbage Collector?
+Serial collector is a default copying collector which uses only one GC thread for
+the GC operation, while a parallel collector uses multiple GC threads for the GC
+ operation.
+
 What is JIT stands for?
+JIT stands for Just In time compilation
+
 Explain Java Heap space and Garbage collection?
+Java Heap space is used by java runtime to allocate memory to Objects and JRE classes. Whenever we create any object, it’s always created in the Heap space.Garbage Collection runs on the heap memory to free the memory used by objects that doesn’t have any reference. Any object created in the heap space has global access and can be referenced from anywhere of the application.
+
 Can you guarantee the garbage collection process?
+Garabge collection in java can not be garantted because java progarammers can not force garbage collection process.
+
 What is the difference between stack and heap in Java?
+Difference between heap and stack is that stack memory is used to store local variables and function while heap memory is used to store objects in Java.
+
+
+
 What is reflection in java and why is it useful?
+Reflection is an API which is used to examine or modify the behavior of methods, classes, interfaces at runtime.
+
+The required classes for reflection are provided under java.lang.reflect package.
+Reflection gives us information about the class to which an object belongs and also the methods of that class which can be executed by using the object.
+Through reflection we can invoke methods at runtime irrespective of the access specifier used with them.
+
 what is multithreading in java?
+Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. So, threads are light-weight processes within a process.
+Threads can be created by using two mechanisms :
+1. Extending the Thread class 2. Implementing the Runnable Interface
+
+
 What is the use of synchronization in Java?
-What is Framework?
-What are the testing Framework available in java?
+Synchronization in java is the capability to control the access of multiple threads to any shared resource.
+Java Synchronization is better option where we want to allow only one thread to access the shared resource.
+
+
+What is Framework? What are the testing Framework available in java?
+Frameworks are large bodies (usually many classes) of pre-written code to which you add your own code to solve a problem in a specific domain. Perhaps you could say that the framework uses your code because it is usually the framework that is in control.
+You make use of a framework by calling its methods, inheritance, and supplying "callbacks", listeners, or other implementations of the Observer pattern.
+JUnit and TestNG
+
 Difference between jUnit and testNG?
+JUnit: @BeforeClass and @AfterClass methods have to be declared as static.
+TestNG does not have this constraint.
+TestNG provides four additional setup/teardown pairs for the suite, test and
+groups, i.e. @BeforeSuite, @AfterSuite,
+@BeforeTest, @AfterTest, @BeforeGroups and @AfterGroups, @BeforeMethod, @BeforeClass,
+@AfterClass and @AfterMethod.
+
 What are the dependencies for this project?
-what is dependency injection in java?
-What is static binding and dynamic binding?
+Dependency injection is a concept valid for any programming language. The general concept behind dependency injection is called Inversion of Control.
+According to this concept a class should not configure its dependencies statically but should be configured from the outside.
+
+What is static binding and  dynamic binding?
+Static Binding: The binding which can be resolved at compile time by compiler is called static or early binding.
+In Dynamic binding compiler doesn’t decide the method to be called. Overriding is a perfect example of dynamic binding. In overriding both parent and child classes have same method .
+
 
 
 
