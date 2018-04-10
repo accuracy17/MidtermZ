@@ -20,22 +20,15 @@ public class EmployeeInfo implements Employee{
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	private int employeeId;
 	private String name;
 	private int employeeAge;
-	private int performance;
+	private int employeeId;
 	private double salary;
+	private int performance;
 	static String companyName;
 	static String Address;
 	public String getName() {
 		return name;
-	}
-	public int getEmployeeId() {
-		return employeeId;
-	}
-
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
 	}
 
 	public void setName(String name) {
@@ -49,12 +42,13 @@ public class EmployeeInfo implements Employee{
 	public void setEmployeeAge(int employeeAge) {
 		this.employeeAge = employeeAge;
 	}
-	public int getPerformance() {
-		return performance;
+
+	public int getEmployeeId() {
+		return employeeId;
 	}
 
-	public void setPerformance(int performance) {
-		this.performance = performance;
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
 	}
 
 	public double getSalary() {
@@ -63,6 +57,14 @@ public class EmployeeInfo implements Employee{
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
 	}
 
 
@@ -132,9 +134,7 @@ public class EmployeeInfo implements Employee{
 
 		return total;
 	}
-	public void assignDepartment() {
 
-	}
 
 	public int employeeId() {
 		return 0;
@@ -146,12 +146,17 @@ public class EmployeeInfo implements Employee{
 	}
 
 
-	public int calcSalary() {
+	public void assignDepartment() {
+
+	}
+
+
+	public int calculateSalary() {
 		return 0;
 	}
 
 
-	public void benefits() {
+	public void benefitLayout() {
 
 	}
 
