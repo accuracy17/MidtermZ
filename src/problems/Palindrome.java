@@ -7,12 +7,12 @@ public class Palindrome {
           Palindrome. So write java code to check if a given String is Palindrome or not.
          */
 
-        String word1 = "Madam";
-        String word2 = "PeopleNtech";
-        checkPalindrome(word1); //is palindrome
-        checkPalindrome(word2); //not palindrome
-        checkPalindrome("DAD"); //is palindrome
-        checkPalindrome("CIVIC"); // is palindrome
+        String word1 = "Zee"; //No
+        String word2 = "did"; // Yes
+        checkPalindrome(word1);
+        checkPalindrome(word2);
+        checkPalindrome("Midterm"); //No
+        checkPalindrome("Wow"); // Yes
     }
 
     public static void checkPalindrome(String word){
@@ -23,9 +23,9 @@ public class Palindrome {
             reverse = reverse + actual.charAt(i);
         }
         if(actual.equals(reverse)){
-            System.out.println("Yes palindrome");
+            System.out.println("Yes it is a palindrome");
         }else{
-            System.out.println("Not palindrome");
+            System.out.println("Not a palindrome");
         }
     }
 }
