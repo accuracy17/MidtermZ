@@ -12,18 +12,18 @@ public class Permutation {
          * Write Java program to compute all Permutation of a String
          *
          */
-        permuation("", "ABCD");
+        permutation("", "ABCD");
 
     }
 
-    public static void permuation(String prefix, String st){
-        int n = st.length();
+    public static void permutation(String prefix, String sg){
+        int n = sg.length();
 
         if(n==0){
             System.out.println(prefix);
         }else{
             for(int i=0; i < n; i++){
-                permuation(prefix + st.charAt(i), st.substring(0, i) + st.substring(i+1,n));
+                permutation(prefix + sg.charAt(i), sg.substring(0, i) + sg.substring(i+1,n));
             }
         }
     }
